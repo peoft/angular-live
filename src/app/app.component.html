@@ -38,3 +38,12 @@
     ESSE E O DEFAULT
   </li>
 </ul>
+
+<ul class="list-group mx-auto col-3">
+  <li 
+  class="list-group-item"
+  *ngFor="let pessoa of pessoas"
+  >
+  O nome da pessoa é {{ pessoa.nome }} {{ pessoa.sobrenome }}.
+  </li>
+</ul>
