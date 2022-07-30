@@ -47,3 +47,12 @@
   O nome da pessoa é {{ pessoa.nome }} {{ pessoa.sobrenome }}.
   </li>
 </ul>
+
+
+<ul class="list-group mx-auto col-3">
+  <ng-template ngFor let-pessoa [ngForOf]="pessoas" >
+      <li class="list-group-item">
+      O nome da pessoa é {{ pessoa.nome }} {{ pessoa.sobrenome }}.
+      </li>
+  </ng-template>
+</ul>
