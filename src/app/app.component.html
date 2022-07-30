@@ -18,3 +18,23 @@
 <ng-template #menor>
   <h2>O contador e menor que 7!</h2>
 </ng-template>
+
+<ul [ngSwitch]="count" class="list-group mx-auto col-3">
+  <li 
+    class="list-group-item"
+    *ngSwitchCase="3"
+  >E igual a 3</li>
+  <li     class="list-group-item"
+  *ngSwitchCase="5"
+  >E igual a 5</li>
+
+  <li     class="list-group-item"
+    *ngSwitchCase="8"
+  >E igual a 8</li>
+  <li 
+    class="list-group-item"
+    *ngSwitchDefault    
+  >
+    ESSE E O DEFAULT
+  </li>
+</ul>
