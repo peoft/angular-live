@@ -3,6 +3,13 @@
 <!-- Contador de 1 até 10 -->
 <!-- Quando contador < 5 background vermelho -->
 <!-- Quando contador > 5 background verde -->
-<div [ngStyle]="{ background: count < 5 ? 'red': 'green' }">
+<!-- Diretivas de atributo -->
+<div 
+[ngStyle]="{ background: count < 5 ? 'red': 'green' }"
+[ngClass]="{ custom: count > 5}"
+>
   <h2 class="text-center">Contador: {{ count }}</h2>
 </div>
+
+<!-- Diretivas Estruturais -->
+<h2 *ngIf="count > 7">O contador passou de 7!</h2>
