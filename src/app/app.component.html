@@ -1,4 +1,4 @@
-<h1 class="text-success text-center">Live angular diretivas</h1>
+<h1 appMarcaTexto corDeFundo="red" corDoTexto="blue" class="text-success text-center">Live angular diretivas</h1>
 
 <!-- Contador de 1 até 10 -->
 <!-- Quando contador < 5 background vermelho -->
@@ -8,7 +8,7 @@
 [ngStyle]="{ background: count < 5 ? 'red': 'green' }"
 [ngClass]="{ custom: count > 5}"
 >
-  <h2 class="text-center">Contador: {{ count }}</h2>
+  <h2 appMarcaTexto class="text-center">Contador: {{ count }}</h2>
 </div>
 
 <!-- Diretivas Estruturais -->
@@ -57,9 +57,10 @@
   </ng-template>
 </ul>
 
-<h3>{{ nome }}</h3>
-
-<button class="btn btn-success col-4 mx-auto" (click)="clicou('Paulo Eduardo')">Clique</button>
+<div class="col-4 mx-auto my-3">
+  <h3 appMarcaTexto corDeFundo="blue" corDoTexto="black"> {{ nome }}</h3>
+  <button class="btn btn-success col-4 mx-auto" (click)="clicou('Paulo Eduardo')">Clique</button>
+</div>
 
 <div class="col-4 mx-auto">
   <input 
