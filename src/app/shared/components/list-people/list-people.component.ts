@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { PeopleService } from '../../services/people.service';
+import { Component, Input, OnInit } from '@angular/core';
 
 interface IPessoa { firstName: string, lastName: string, age: number };
 
@@ -10,23 +9,17 @@ interface IPessoa { firstName: string, lastName: string, age: number };
 })
 
 export class ListPeopleComponent implements OnInit {
-  pessoas: IPessoa  [] = [ 
+  @Input() list: IPessoa [] = [
     {
       firstName: '',
       lastName: '',
       age: 0
     }
-  ]
+  ];
 
-  constructor(private peopleService: PeopleService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.getPeople();
   }  
 
-  getPeople() {
-    this.peopleService.getPeople().subscribe(people => {
-      this.pessoas = people;
-    })
-  }
 }
