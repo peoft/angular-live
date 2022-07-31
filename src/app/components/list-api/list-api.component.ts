@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiResponse, ListService } from 'src/app/shared/services/list.service';
+import { ListService } from 'src/app/shared/services/list.service';
 
 @Component({
   selector: 'app-list-api',
